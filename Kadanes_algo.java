@@ -1,3 +1,5 @@
+//Find maximum
+
 import java.util.*;
 public class Kadanes_algo {
 
@@ -7,17 +9,20 @@ public class Kadanes_algo {
         int maxSum=Integer.MIN_VALUE;
         int ispositive=0;
 
-        for(int i=0;i<arr.length;i++)
+        for(int i=0;i<arr.length;i++) //check wheather all elements in the array are -ve 
+                                        //kadans algo doesn't work for a -ve array
         {
             if(arr[i]>0)
             {
                 ispositive=1;
+                break; 
             }
             else{
-                maxSum=Math.max(maxSum,arr[i]);
+                maxSum=Math.max(maxSum,arr[i]); //returns the largest no
             }
         }
-        if(ispositive==1)
+
+        if(ispositive==1) //if there is any +ve elements in the array we use kadans algorithm
         {
             for(int i=0;i<arr.length;i++)
             {
@@ -41,7 +46,7 @@ public class Kadanes_algo {
         int n=sc.nextInt();
         int arr[]=new  int[n];
         System.out.println("enter Elements in your arrray :");
-        
+
         for(int i=0;i<n;i++)
         {
             arr[i]=sc.nextInt();
