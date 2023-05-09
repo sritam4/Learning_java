@@ -1,1 +1,3 @@
-                // max_profit=Math.max(max_profit,profit);
+System.out.println("enter key to search   :");
+        // int key=sc.nextInt();
+        // search(arr, key);
