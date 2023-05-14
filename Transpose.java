@@ -46,6 +46,5 @@ public class Transpose {
         System.out.println("Array before transpose is   :");
         display(arr);
         transpose(arr);
-            
     }
 }
